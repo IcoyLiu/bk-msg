@@ -1,7 +1,9 @@
 import json
+import json
 import os
 from urllib.parse import urljoin
 
+import urllib.parse
 import requests
 
 from core.exception.base import ClientError
@@ -170,6 +172,21 @@ class DouBanDefine(BaseApiDefine):
     def total_url(self):
         return f"https://movie.douban.com/j/{self.path}"
 
+"""
+class DouBanHighMovieDefine(BaseApiDefine):
+    def __init__(self, site, path, method, description="", is_json=True, is_file=False):
+        super().__init__(site, path, method, description, is_json, is_file)
+        self.headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+        }
+
+    @property
+    def total_url(self):
+        url = "https://movie.douban.com/j/search_subjects/"
+        return url
+"""
+
 
 class DouBanOperation(BaseAPIOperation):
     def __init__(self):
@@ -177,6 +194,127 @@ class DouBanOperation(BaseAPIOperation):
         self.search_tags = DouBanDefine(self.site, "search_tags", "GET", description="获取标签")
 
 
+"""
+class DouBanHighMovieOperation(BaseAPIOperation):
+    def __init__(self):
+        super().__init__()
+        self.search_movies = DouBanHighMovieDefine(self.site, "search_tags", "GET", description="获取标签")
+
+
+# 定义腾讯云短信接口
+class TencentSMSDefine(BaseApiDefine):
+    def __init__(self, site, path, method, description="", is_json=True, is_file=False):
+        super().__init__(site, path, method, description, is_json, is_file)
+        self.headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+        }
+
+    @property
+    def total_url(self):
+        url = "https://movie.douban.com/j/search_subjects/"
+        return url
+
+# 定义腾讯云短信行为
+class TencentSMSOperation(BaseAPIOperation):
+    def __init__(self):
+        super().__init__()
+        self.search_tags = DouBanDefine(self.site, "search_tags", "GET", description="获取标签")
+
+# 定义钉钉消息接口
+class DingDingTalkDefine(BaseApiDefine):
+    def __init__(self, site, path, method, description="", is_json=True, is_file=False):
+        super().__init__(site, path, method, description, is_json, is_file)
+        self.headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+        }
+
+    @property
+    def total_url(self):
+        url = "https://oapi.dingtalk.com/topapi/message/corpconversation/asyncsend_v2"
+        return url
+
+    # 获取token
+    def get_token(self):
+        data = None
+        params = {
+            "appkey": "dingdrvtrc1zzd6wohwf",
+            "appsecret": "vTnxW2681P_dmq4P_7OQKwCwRqbTDYehMNITlrEwTJGKFQWkxRgW_C4XiRzs61SI"
+        }
+        token_url = "https://oapi.dingtalk.com/gettoken"
+        res = requests.get(url=token_url, params=params, data=json.dumps(data))
+        return res.json()["access_token"]
+
+    # 根据手机号获取用户id
+    def get_userid(self, access_token, mobile):
+        data = {
+            "mobile": mobile
+        }
+        params = {
+            "access_token": access_token
+        }
+        user_url = "https://oapi.dingtalk.com/topapi/v2/user/getbymobile"
+        res = requests.post(url=user_url, params=params, data=data)
+        logger.error(res.json())
+        logger.error(mobile)
+        return res.json()["result"]["userid"]
+
+    @fn_performance
+    def _call(self, **kwargs):
+        access_token = self.get_token()
+        url_params = {"access_token": access_token}
+        headers = kwargs.pop("headers", {})
+        headers.update(self.headers)
+        cookies = kwargs.pop("cookies", {})
+        mobile = kwargs.pop("mobile", {})
+        user_id = self.get_userid(access_token, mobile)
+        params = {}
+        params.update(kwargs)
+        params.append["userid_list"] = user_id
+        params.append["agent_id"] = "2480439072"
+        total_url = self.total_url.format(**url_params)
+        http_map = {
+            "GET": self.http_get,
+            "POST": self.http_post,
+            "PUT": self.http_post,
+            "PATCH": self.http_post,
+            "DELETE": self.http_post,
+        }
+        fun = http_map.get(self.method, self.http_get)
+        return fun(headers, cookies, params, total_url)  # noqa
+
+
+# 定义钉钉消息行为
+class DingDingTalkOperation(BaseAPIOperation):
+    def __init__(self):
+        super().__init__()
+        self.send_dingtalk = DingDingTalkDefine(self.site, "send_dingtalk", "POST", description="发送钉钉消息")
+
+
+# 定义Kafka消息接口
+class KafkaDefine(BaseApiDefine):
+    def __init__(self, site, path, method, description="", is_json=True, is_file=False):
+        super().__init__(site, path, method, description, is_json, is_file)
+        self.headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+        }
+
+    @property
+    def total_url(self):
+        url = "https://movie.douban.com/j/search_subjects/"
+        return url
+
+# 定义Kafka消息行为
+class KafkaOperation(BaseAPIOperation):
+    def __init__(self):
+        super().__init__()
+        self.search_tags = DouBanDefine(self.site, "search_tags", "GET", description="获取标签")
+"""
+
 class ApiManager(LinkConfig):
     flow = FlowOperation()
     douban = DouBanOperation()
+    #highMovie = DouBanHighMovieOperation()
+    #dingding = DingDingTalkOperation()

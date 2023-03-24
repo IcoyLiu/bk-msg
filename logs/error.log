@@ -1,0 +1,580 @@
+2023-03-21 11:43:51.331 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/douban/movies
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': 'aeb0bbaf-0a10-427a-a6a7-d11bd8f588af', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '124'})
+message:KeyError('tags',)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\example\api\test_api.py", line 42, in get_high_movies
+    return CommonResponseSchema(data=resp["tags"], message="操作成功", success=True)
+KeyError: 'tags'
+
+2023-03-21 17:51:25.893 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': '05a552c9-bbfe-417b-be08-e0f8665cc381', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:NameError("name 'get_token' is not defined",)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\example\api\test_api.py", line 46, in get_high_movies
+    resp = ApiManager.dingding.send_dingtalk()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 65, in __call__
+    return self._call(**kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\utils\performance.py", line 35, in wrapper
+    result = func(*real_args, **real_kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 261, in _call
+    access_token = get_token
+NameError: name 'get_token' is not defined
+
+2023-03-21 17:52:06.360 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': 'a54c5c09-e2ef-4b1c-aafb-af7a7155d3fb', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:NameError("name 'headers' is not defined",)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\example\api\test_api.py", line 46, in get_high_movies
+    resp = ApiManager.dingding.send_dingtalk()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 65, in __call__
+    return self._call(**kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\utils\performance.py", line 35, in wrapper
+    result = func(*real_args, **real_kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 261, in _call
+    access_token = self.get_token()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 244, in get_token
+    res = requests.get(url=token_url, headers=headers, cookies=cookies, params=params, data=data)
+NameError: name 'headers' is not defined
+
+2023-03-21 17:52:46.738 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': '5dfa665a-79ea-41ef-8228-e7f740dcd6ef', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:NameError("name 'headers' is not defined",)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\example\api\test_api.py", line 46, in get_high_movies
+    resp = ApiManager.dingding.send_dingtalk()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 65, in __call__
+    return self._call(**kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\utils\performance.py", line 35, in wrapper
+    result = func(*real_args, **real_kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 261, in _call
+    access_token = self.get_token()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 244, in get_token
+    res = requests.get(url=token_url, headers=headers, params=params, data=data)
+NameError: name 'headers' is not defined
+
+2023-03-21 17:53:10.074 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': '9b0bba36-b26f-4433-abff-984fc0deacb1', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:KeyError('access_token',)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\example\api\test_api.py", line 46, in get_high_movies
+    resp = ApiManager.dingding.send_dingtalk()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 65, in __call__
+    return self._call(**kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\utils\performance.py", line 35, in wrapper
+    result = func(*real_args, **real_kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 261, in _call
+    access_token = self.get_token()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 245, in get_token
+    return res.json()["access_token"]
+KeyError: 'access_token'
+
+2023-03-21 17:54:39.999 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': '45fdbeab-67ac-4cfa-a1aa-57302b59274e', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:NameError("name 'moblie' is not defined",)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\example\api\test_api.py", line 46, in get_high_movies
+    resp = ApiManager.dingding.send_dingtalk()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 65, in __call__
+    return self._call(**kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\utils\performance.py", line 35, in wrapper
+    result = func(*real_args, **real_kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 267, in _call
+    user_id = self.get_userid(access_token, mobile)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 250, in get_userid
+    "mobile": moblie
+NameError: name 'moblie' is not defined
+
+2023-03-21 17:55:32.916 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': '1b0eaa89-adca-4a90-a8f6-0fb4f6aecfe4', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:NameError("name 'moblie' is not defined",)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\example\api\test_api.py", line 46, in get_high_movies
+    resp = ApiManager.dingding.send_dingtalk()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 65, in __call__
+    return self._call(**kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\utils\performance.py", line 35, in wrapper
+    result = func(*real_args, **real_kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 267, in _call
+    user_id = self.get_userid(access_token, mobile)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 250, in get_userid
+    "mobile": moblie
+NameError: name 'moblie' is not defined
+
+2023-03-21 17:55:58.855 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': '978e0e12-d0cd-4aa1-8920-30571ba69759', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:TypeError("'Response' object is not subscriptable",)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\example\api\test_api.py", line 46, in get_high_movies
+    resp = ApiManager.dingding.send_dingtalk()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 65, in __call__
+    return self._call(**kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\utils\performance.py", line 35, in wrapper
+    result = func(*real_args, **real_kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 267, in _call
+    user_id = self.get_userid(access_token, mobile)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 257, in get_userid
+    return res["result"]["userid"]
+TypeError: 'Response' object is not subscriptable
+
+2023-03-21 17:56:20.238 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': '8e5101dc-caf6-4fad-bcdb-de046fdc3e81', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:KeyError('result',)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\example\api\test_api.py", line 46, in get_high_movies
+    resp = ApiManager.dingding.send_dingtalk()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 65, in __call__
+    return self._call(**kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\utils\performance.py", line 35, in wrapper
+    result = func(*real_args, **real_kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 267, in _call
+    user_id = self.get_userid(access_token, mobile)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 257, in get_userid
+    return res.json()["result"]["userid"]
+KeyError: 'result'
+
+2023-03-21 18:40:58.661 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': 'aec2fb70-05ef-4008-91bf-63400b81ee31', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:KeyError('result',)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\example\api\test_api.py", line 46, in get_high_movies
+    resp = ApiManager.dingding.send_dingtalk()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 65, in __call__
+    return self._call(**kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\utils\performance.py", line 35, in wrapper
+    result = func(*real_args, **real_kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 267, in _call
+    user_id = self.get_userid(access_token, mobile)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 257, in get_userid
+    return res.json()["result"]["userid"]
+KeyError: 'result'
+
+2023-03-21 18:42:20.030 | MainThread | ERROR | main : get_userid:257 -  {'errcode': 40, 'errmsg': 'Missing required arguments:mobile', 'request_id': '16mmqjytu6zby'}
+2023-03-21 18:42:20.032 | MainThread | ERROR | main : get_userid:258 -  {}
+2023-03-21 18:42:20.037 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': '264b8b91-c1dc-49d7-a8a0-10ca252e44f1', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:KeyError('result',)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\example\api\test_api.py", line 46, in get_high_movies
+    resp = ApiManager.dingding.send_dingtalk()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 65, in __call__
+    return self._call(**kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\utils\performance.py", line 35, in wrapper
+    result = func(*real_args, **real_kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 269, in _call
+    user_id = self.get_userid(access_token, mobile)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 259, in get_userid
+    return res.json()["result"]["userid"]
+KeyError: 'result'
+
+2023-03-22 11:10:20.389 | MainThread | ERROR | main : get_userid:257 -  {'errcode': 40, 'errmsg': 'Missing required arguments:mobile', 'request_id': '15r9fkb9lcxug'}
+2023-03-22 11:10:20.390 | MainThread | ERROR | main : get_userid:258 -  {}
+2023-03-22 11:10:20.418 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': '60208a71-2dc1-4635-ac29-254062aa13db', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:KeyError('result',)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\example\api\test_api.py", line 46, in get_high_movies
+    resp = ApiManager.dingding.send_dingtalk()
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 65, in __call__
+    return self._call(**kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\utils\performance.py", line 35, in wrapper
+    result = func(*real_args, **real_kwargs)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 269, in _call
+    user_id = self.get_userid(access_token, mobile)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\core\bk_api_utils\main.py", line 259, in get_userid
+    return res.json()["result"]["userid"]
+KeyError: 'result'
+
+2023-03-22 11:13:17.386 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': '6c1ea47c-1bcf-4032-aee6-4a22d9b16018', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:TypeError("__init__() missing 1 required positional argument: 'params'",)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\msg\api\msg_api.py", line 27, in get_high_movies
+    dingding =DingDing()
+TypeError: __init__() missing 1 required positional argument: 'params'
+
+2023-03-22 11:16:06.429 | MainThread | ERROR | handlers : all_exception_handler:42 -  全局异常
+URL:http://127.0.0.1:8080/api/dingtalk
+Headers:Headers({'content-type': 'application/json', 'user-agent': 'PostmanRuntime/7.31.3', 'accept': '*/*', 'postman-token': '020a80df-74e4-49c6-a48c-4f7bbea4d870', 'host': '127.0.0.1:8080', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '113'})
+message:TypeError("__init__() missing 1 required positional argument: 'params'",)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\gzip.py", line 43, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\ProgramData\Anaconda3\envs\weops_extension_api\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Icoy\OneDrive\Work\Summary\WeOps\Code\Python\消息通道对接\bk-msg\server\apps\msg\api\msg_api.py", line 27, in get_high_movies
+    dingding =DingDing()
+TypeError: __init__() missing 1 required positional argument: 'params'
+

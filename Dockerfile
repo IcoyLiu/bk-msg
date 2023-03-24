@@ -15,7 +15,7 @@ WORKDIR /app
 ADD ./server ./server
 ADD ./core ./core
 ADD ./main.py ./main.py
-ADD ./.env.prod ./env
+ADD ./.env.prod ./.env
 ADD ./requirements.txt ./requirements.txt
 
 ENV APP_HOST 0.0.0.0
@@ -29,4 +29,4 @@ RUN mkdir -p /app/run
 RUN chown -R 1001:1001 /app
 
 USER example
-CMD python /app/main.py
+CMD python3 /app/main.py

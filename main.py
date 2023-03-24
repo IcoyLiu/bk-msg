@@ -2,12 +2,12 @@ import uvicorn
 
 from core.bootstrap import BootStrap
 from core.settings import settings
-from server.apps.example.url import test_api
+from server.apps.msg.url import msg_api
 
 bootstrap = BootStrap(
     app_name="Weops-Extension-Api",
     app_version="0.1.0",
-    routers=[test_api],
+    routers=[msg_api],
 )
 bootstrap.boot()
 
